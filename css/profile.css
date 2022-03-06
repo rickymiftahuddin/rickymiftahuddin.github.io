@@ -33,9 +33,13 @@ header {
     margin-top: 1em;
 }
 
+.profile-bio a:visited {
+    color: orange;
+}
+
 .profile-bio a:hover {
     background-color: #f1f1f1;
-    color: orange;
+    color: grey;
 }
 
 @media screen and (max-width: 480px) {
