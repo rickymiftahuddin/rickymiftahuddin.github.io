@@ -1,8 +1,20 @@
 function calculateTax(taxYear, name, annualIncome, marriageStatus, dependentChildrenCount) {
 
     let tax
-    let pkp = 50000000
-    annualIncome -= pkp
+    let ptkp = 50000000
+
+    if (marriageStatus == "Menikah") {
+        ptkpChildCount = dependentChildrenCount*15000000
+        ptkp += ptkpChildCount+10000000
+    } else if (marriageStatus == "Cerai") {
+
+        if (dependentChildrenCount > 0) {
+            ptkpChildCount = dependentChildrenCount*15000000
+            ptkp += ptkpChildCount+20000000
+        }
+    }
+
+    annualIncome -= ptkp
 
     if (annualIncome>0 && annualIncome<=200000000) {
         tax = annualIncome*.1
@@ -13,7 +25,6 @@ function calculateTax(taxYear, name, annualIncome, marriageStatus, dependentChil
     } else {
         tax = 0
     }
-
 
     console.log(taxYear, name, annualIncome, marriageStatus, dependentChildrenCount)
     return tax
