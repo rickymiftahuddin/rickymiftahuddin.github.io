@@ -7,7 +7,7 @@ function calculateTax(taxYear, name, annualIncome, marriageStatus, dependentChil
     if (marriageStatus == "Menikah") {
         ptkpChildCount = dependentChildrenCount*15000000
         ptkp += ptkpChildCount+10000000
-    } else if (marriageStatus == "Cerai") {
+    } else if (marriageStatus == "Cerai" || marriageStatus == "Lajang") {
         if (dependentChildrenCount > 0) {
             ptkpChildCount = dependentChildrenCount*15000000
             ptkp += ptkpChildCount+20000000
