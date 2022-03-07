@@ -168,6 +168,7 @@ nav form input:focus {
         border-radius: 50px;
         text-align: center;
         margin: auto;
+        box-shadow: 2px 2px 3px #999;
     }
 
     .nav-mobile .btn-float .text-float{
